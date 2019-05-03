@@ -5,8 +5,8 @@ body{
 
 .timeline {
   position: relative;
-  margin: 50px auto;
-  padding: 40px 0;
+  margin: 20px auto;
+  padding: 10px 0;
   width: 1000px;
   box-sizing: border-box;
 }
@@ -66,7 +66,7 @@ body{
 .timeline ul li:nth-child(odd):before {
   content: '';
   position: absolute;
-  top: 24px;
+  top: 28px;
   right: -6px;
   width: 10px;
   height: 10px;
@@ -78,7 +78,7 @@ body{
 .timeline ul li:nth-child(even):before {
   content: '';
   position: absolute;
-  top: 24px;
+  top: 28px;
   left: -4px;
   width: 10px;
   height: 10px;
@@ -108,8 +108,8 @@ body{
 /* Fecha Timeline impar*/
 .timeline ul li:nth-child(odd) .time {
   position: absolute;
-  top: 12px;
-  right: -165px;
+  top: 16px;
+  right: -140px;
   margin: 0;
   padding: 8px 16px;
   background: rgba(33,139,233,1);
@@ -121,8 +121,8 @@ body{
 /* Fecha Timeline par*/
 .timeline ul li:nth-child(even) .time {
   position: absolute;
-  top: 12px;
-  left: -165px;
+  top: 16px;
+  left: -140px;
   margin: 0;
   padding: 8px 16px;
   background: rgba(33,139,233,1);
@@ -134,6 +134,8 @@ body{
 /* Title*/
 h2 {
   text-align: center;
+  padding: 10px;
+  margin: 10px;
 }
 
 @media (max-width: 1000px) {
@@ -150,6 +152,7 @@ h2 {
 
   .timeline{
     width: 100%;
+    padding: 30px 0px 20px 0px;
     padding-bottom: 0;
   }
 
