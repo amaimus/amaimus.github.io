@@ -2,75 +2,27 @@
 <div class="timeline ui accordion">
   <ul>
     <li *ngFor="let event of events">
-      <div class="content">
-        <h3>{{event.title}}</h3>
-        <p>{{event.content}}</p>
-        <div class="ui accordion">
-          <div class="title">
-            <i class="dropdown icon"></i>
-            What kinds of dogs are there?
-          </div>
-          <div class="content">
-            <p>There are many breeds of dogs. Each breed varies in size and temperament. Owners often select a breed of dog that they find to be compatible with their own lifestyle and desires from a companion.</p>
-          </div>
-        </div>
-      </div>
-      <div class="time">
-        <h4>{{event.time}}</h4>
-      </div>
-    </li>
-    <div style="clear: both;"></div>
-  </ul>
-</div>
-
-<h2>{{title}}</h2>
-<div class="timeline ui accordion">
-  <ul>
-    <li *ngFor="let event of events">
-      <div class="ui accordion">
-        <div class="active title">
-          <h3>{{event.title}}<i class="dropdown icon"></i></h3>
-        </div>
-        <div class="active content">
-          <p>{{event.content}}</p>
-          <div class="ui accordion">
-            <div class="title">
-              <p>Ver mas<i class="dropdown icon"></i></p>
-            </div>
-            <div class="content">
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt dolorem porro voluptatum, similique delectus voluptatem, fugit nisi dolore ex repudiandae quae culpa commodi ad blanditiis voluptates minus reiciendis doloribus veritatis. Quis ex, nam, dolorem consectetur, soluta qui totam voluptatem aliquid nisi tempora vitae. Repudiandae dignissimos esse ea amet nihil eaque.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="time">
-        <h4>{{event.time}}</h4>
-      </div>
-    </li>
-    <div style="clear: both;"></div>
-  </ul>
-</div>
-
-
-
-
-
-
-
-
-
-<!--   TIMELINE accordion
-<h2>{{title}}</h2>
-<div class="timeline ui accordion">
-  <ul>
-    <li *ngFor="let event of events">
       <div class="title">
-
-        <h3>{{event.title}}<i class="dropdown icon"></i></h3>
+        <h3>{{event.title}}</h3>
+        <p>{{event.resume}}</p>
+        <p><i class="dropdown icon"></i>Ver mas</p>
       </div>
       <div class="content">
         <p>{{event.content}}</p>
+        <!-- images -->
+        <div class="ui small images">
+          <img class="ui middle aligned image cursor" *ngFor="let image of event.images" (click)="modal(image.id)" src="{{image.src}}">
+        </div>
+        <div *ngFor="let image of event.images">
+          <!-- Modal -->
+          <div [hidden]="true" [id]="image.id" class="fullscreen modal">
+            <div class="image">
+              <img class="image" src="{{image.src}}">
+            </div>
+          </div>
+        </div>
       </div>
+      <!-- time -->
       <div class="time">
         <h4>{{event.time}}</h4>
       </div>
@@ -78,4 +30,3 @@
     <div style="clear: both;"></div>
   </ul>
 </div>
--->
