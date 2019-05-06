@@ -133,13 +133,6 @@ body{
   box-shadow:  0 0 0 3px rgba(33,139,233,1);
 }
 
-/* Title*/
-h2 {
-  text-align: center;
-  padding: 10px;
-  margin: 10px;
-}
-
 @media (max-width: 1000px) {
   .timeline{
     width: 100%;
